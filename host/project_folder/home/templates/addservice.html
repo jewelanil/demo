@@ -1,0 +1,1036 @@
+
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Admin  | Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Fast Service a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/easy-responsive-tabs.css' %}" rel='stylesheet' type='text/css'/>
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_common.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+</head>
+<body>
+<header>
+	<!-- header -->
+	<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="index.html">Your Homey</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="adminhom">Home </a>
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Service
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="addservic">Add Service</a>
+          <a class="dropdown-item" href="viewservic">View Service</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Customer
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="viewuser">View Customer</a>
+          <a class="dropdown-item" href="adminorder">View Order</a>
+        </div>
+      </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Worker
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="empview">View Worker</a>
+        </div>
+        <li class="nav-item">
+            <a class="nav-link " href="ad_bookdt">Paid Order</a>
+        </li>
+</li>
+        <li class="nav-item">
+        <a class="nav-link " href="adminfeed">Feedback</a>
+      </li>
+
+<li class="w3">
+                            <a href="index" class="nav-link">Logout</a>
+                        </li>
+
+    </ul>
+  </div>
+</nav>
+	<style>
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+
+
+	<!-- //header -->
+
+	<!-- banner -->
+	<!-- banner-slider -->
+	<div class="w3l_banner_info">
+		<div class="slider">
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider3">
+
+
+					<li>
+						<div class="slider-img">
+							<div class="slider_banner_info">
+							<div class="text" style="position:absolute;left:800px;top:250px">
+
+
+
+<!--<form method="post" enctype="multipart/form-data">-->
+<!--  {% csrf_token %}-->
+<!--  <div class="container register-form">-->
+<!--    <div class="form">-->
+<!--     <div class="panel-heading">-->
+<!--        <h5 class="panel-title">ADD PRODUCTS</h5>-->
+<!--      </div>-->
+
+<!--                {% if messages %}-->
+<!--                <div class="container">-->
+<!--                <div class ="alert alert-success alert-dismissible messages">-->
+<!--                {% for message in messages %}-->
+<!--                <button type="button" class="close" data-dismiss="alert">&times;</button>-->
+<!--               {{message}}-->
+<!--               </div>-->
+<!--                    {% endfor %}-->
+<!--                </div>-->
+<!--                    {% endif %}-->
+<!--      <div class="form-content">-->
+<!--        <div class="row ">-->
+<!--          <div class="col-lg-12">-->
+<!--                   <div class="form-box">-->
+<!--                       <select name="category">-->
+<!--                              <option>Select Category </option>-->
+<!--                              <option value="homecleaning">Home Cleaning</option>-->
+<!--                              <option value="maidservices">Maid Services</option>-->
+<!--                              <option value="windowwashing">Window Washing</option>-->
+<!--                              <option value="commercialcleaning">Commercial Cleaning</option>-->
+<!--                              <option value="moveinout">Move-In/Move-Out Cleaning</option>-->
+<!--                              <option value="carpetcleaning">Carpet Cleaning</option>-->
+<!--                       </select>-->
+<!--                  </div>-->
+<!--&lt;!&ndash;                  <div class="form-box">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <input type="text" placeholder="Product Name"  name="product_name" required="required" >&ndash;&gt;-->
+<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
+<!--                  <div class="form-box" >-->
+<!--                    <input type="text" placeholder="Description"  name="description" maxlength="300" required="required" />-->
+<!--                  </div>-->
+<!--                  <div class="form-box">-->
+<!--                    <input type="number" placeholder="Price"  name="price" required="required" />-->
+<!--                  </div>-->
+<!--                  <div class="form-box">-->
+<!--                    <input type="file"  name="image" required="required" />-->
+<!--                  </div>-->
+<!--           </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <button type="submit" class="btnSubmit">ADD</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</form>-->
+
+<form action="add" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+      <h1 style="color:white;" class="panel-title"><b>ADD SERVICES</b></h1>
+
+<!--      <div class="input-container ic1">-->
+<!--&lt;!&ndash;        <input id="firstname" class="input" type="text" placeholder=" " />&ndash;&gt;-->
+<!--		   <select name="category" style="width:450px;height:50px;">-->
+<!--				  <option>Select Category </option>-->
+<!--				  <option value="Home Cleaning">Home Cleaning</option>-->
+<!--				  <option value="Maid Services">Maid Services</option>-->
+<!--				  <option value="Window Washing">Window Washing</option>-->
+<!--				  <option value="Commercial Cleaning">Commercial Cleaning</option>-->
+<!--				  <option value="Move-In/Move-Out Cleaning">Move-In/Move-Out Cleaning</option>-->
+<!--				  <option value="Carpet Cleaning">Carpet Cleaning</option>-->
+<!--		   </select>-->
+<!--        <div class="cut"></div>-->
+<!--        <label  class="placeholder"></label>-->
+<!--      </div>-->
+	      <div class="input-container ic2">
+	    <input type="text" placeholder="service"  name="servicenam" maxlength="200" required="required" />
+        <div class="cut"></div>
+        <label class="placeholder"></label>
+      </div>
+      <div class="input-container ic2">
+	    <input type="text" placeholder="Description"  name="description" maxlength="300" required="required" />
+<!--        <input id="lastname" class="input" type="text" placeholder="Description" />-->
+        <div class="cut"></div>
+        <label class="placeholder"></label>
+      </div>
+
+      <div class="input-container ic2">
+	    <input style="width:450px;height:50px;" type="number" placeholder=" price"  name="price" required="required" />
+<!--        <input id="lastname" class="input" type="text" placeholder="Description" />-->
+        <div class="cut"></div>
+        <label class="placeholder"></label>
+      </div>
+
+      <div class="input-container ic2" style="color:white; height:50px;">
+	    <input style="width:450px;height:50px;" type="file" placeholder="IMAGE"  name="image" required="required" />
+<!--        <input id="lastname" class="input" type="text" placeholder="Description" />-->
+        <div class="cut"></div>
+        <label class="placeholder"></label>
+      </div>
+    					{% if messages %}
+			<div class="container">
+				<div class="alert alert-success alert-dismissible messages">
+					{% for message in messages %}
+						<button type="button" class="close" data-dismiss="alert"></button>
+					 {{message}}
+				</div>
+				 {% endfor %}
+			</div>
+			{% endif %}
+	  <button type="submit" class="btnSubmit">ADD</button>
+<!--      <button type="text" class="submit">submit</button>-->
+</form>
+
+<!--								  <h3 class="word wisteria">We Are The Best Home Service For Making Your Home Shine</h3>-->
+<!--								  <p>Committed to Keeping Your Home Squeaky Clean</p>-->
+								</div>
+
+							</div>
+						</div>
+
+
+					</li>
+<!--					<li>-->
+<!--						<div class="slider-img-2">-->
+<!--							<div class="slider_banner_info">-->
+<!--								<div class="text">-->
+<!--								  <h3 class="word wisteria">Making your Home Shine and Spotless Is Our Business And Priority</h3>-->
+<!--								  <p>Committed to Keeping Your Home Squeaky Clean</p>-->
+<!--								</div>-->
+
+<!--							</div>-->
+<!--						</div>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<div class="slider-img-3">-->
+<!--							<div class="slider_banner_info">-->
+<!--								<div class="text">-->
+<!--								  <h3 class="word wisteria">Our Home Service Providers will Make You Proud in Society</h3>-->
+<!--								  <p>Committed to Keeping Your Home Squeaky Clean</p>-->
+<!--								</div>-->
+
+<!--							</div>-->
+<!--						</div>-->
+<!--					</li>-->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //banner-slider -->
+</div>
+</header>
+<!--<section class="bannerbottom py-lg-5 py-md-4 py-md-3 py-2">-->
+<!--<div class="bannerbottom py-lg-5 py-md-4 py-md-3 py-2">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-md-4 col-sm-12 w3_ban1">-->
+<!--<div class="card" >-->
+<!--  <img class="card-img-top" src="{% static 'images/homeclean (1).jpeg' %}" alt="Card image cap">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Home Cleaning</h5>-->
+<!--    <p class="card-text">Experience the difference of our professional house cleaning services in Kochi. Let's take care of your move-in/move-out, one-time cleaning needs, so you can enjoy a clean, neat, and tidy home without the hassle.</p>-->
+<!--    <a href="services" class="btn btn-primary">Explore</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-4 col-sm-12 w3_ban1">-->
+<!--<div class="card" >-->
+<!--  <img class="card-img-top" src="{% static 'images/homeclean2.jpeg' %}" alt="Card image cap">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Maid Services</h5>-->
+<!--    <p class="card-text">An ideal house maid, not just helps or completes the daily chores for you, but becomes a support system whom you can rely on.</p>-->
+<!--    <a href="services" class="btn btn-primary">Explore</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-4 col-sm-12 w3_ban1">-->
+<!--<div class="card" >-->
+<!--  <img class="card-img-top" src="{% static 'images/hc3 (1).jpeg' %}" alt="Card image cap">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Window Washing</h5>-->
+<!--    <p class="card-text">We use micro duster to clean such spaces and makes sure the grills and Glasses are dust free and clear. Make your window shine with us</p>-->
+<!--    <a href="services" class="btn btn-primary">Explore</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-4 col-sm-12 w3_ban">-->
+<!--<div class="card" >-->
+<!--  <img class="card-img-top" src="{% static 'images/hc5 (1).jpeg' %}" alt="Card image cap">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Commercial Cleaning</h5>-->
+<!--    <p class="card-text">Create a clean, safe, and comfortable environment within your industrial, healthcare, or hospitality facility with our Commercial Cleaning and Maintenance Solutions</p>-->
+<!--    <a href="services" class="btn btn-primary">Explore</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-4 col-sm-12 w3_ban">-->
+<!--<div class="card" >-->
+<!--  <img class="card-img-top" src="{% static 'images/hc8 (1).jpeg' %}" alt="Card image cap">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Move-In/Move-Out Cleaning</h5>-->
+<!--    <p class="card-text">We offer flexible move in and move out cleaning services to ease the transition to your new home or apartment</p>-->
+<!--    <a href="services" class="btn btn-primary">Explore</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-4 col-sm-12 w3_ban">-->
+<!--<div class="card" >-->
+<!--  <img class="card-img-top" src="{% static 'images/hc7 (2).jpeg' %}" alt="Card image cap">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Carpet Cleaning</h5>-->
+<!--    <p class="card-text">Give your carpet a second chance with My Homey. You won't need to think the next time your baby plays on the carpet.We provide the best Carpet Cleaning Service in Cochin.</p>-->
+<!--    <a href="services" class="btn btn-primary">Explore</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!--&lt;!&ndash;<section class="pricinglist ">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="pricinglist ">&ndash;&gt;-->
+<!--&lt;!&ndash;<h3 class="mb-lg-5 mb-md-4 mb-sm-3 mb-2">Our Pricing Plans</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="w3_1">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-6 w3_a1">&ndash;&gt;-->
+<!--&lt;!&ndash;<h4>Basic</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>1 month</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-6 w3_a2">&ndash;&gt;-->
+<!--&lt;!&ndash;<h4>₹4900.00</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="w3_1">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-6 col-xs-6 w3_a1">&ndash;&gt;-->
+<!--&lt;!&ndash;<h4>Standard</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>6 months</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-6 col-xs-6 w3_a2">&ndash;&gt;-->
+<!--&lt;!&ndash;<h4>₹24900.00</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="w3_1">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-6 w3_a1">&ndash;&gt;-->
+<!--&lt;!&ndash;<h4>Premium</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>9 months</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="col-sm-6 w3_a2">&ndash;&gt;-->
+<!--&lt;!&ndash;<h4>₹39000.00</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</section>&ndash;&gt;-->
+
+<!--<section class="mission py-lg-5 py-md-4 py-md-3 py-2">-->
+<!--<div class="mission py-lg-5 py-md-4 py-md-3 py-2">-->
+<!--<div class="row">-->
+<!--<div class="col-md-3 col-sm-12 w3_ms8">-->
+<!--<img src="{% static 'images/bb9.jpg' %}" alt="xt" class="img-fluid">-->
+<!--</div>-->
+<!--<div class="col-md-3 col-sm-12 w3_ms1">-->
+<!--<h4 class="mb-lg-4 mb-md-3 mb-sm-2 mb-2">Why We Do It</h4>-->
+<!--<p>Your Homey was founded so that residents or office clients could find household service companies that meet their needs hassle free. We aspire to be pioneers in cleaning, maintenance and repair services by setting new standards.</p>-->
+<!--</div>-->
+<!--&lt;!&ndash;<div class="col-md-6 col-sm-12 w3_ms3">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash; Slideshow container &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="slideshow-container">&ndash;&gt;-->
+
+<!--&lt;!&ndash;  &lt;!&ndash; Full-width slides/quotes &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="mySlides">&ndash;&gt;-->
+<!--&lt;!&ndash;  <img src="{% static 'images/test1.jpg' %}" alt="xyt" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;    &ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <div class="mySlides">&ndash;&gt;-->
+<!--&lt;!&ndash;  <img src="{% static 'images/test2.jpg' %}" alt="xyt" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;    &ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <div class="mySlides">&ndash;&gt;-->
+<!--&lt;!&ndash;  <img src="{% static 'images/test3.jpg' %}" alt="xyt" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;    &ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  &lt;!&ndash; Next/prev buttons &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>&ndash;&gt;-->
+<!--&lt;!&ndash;  <a class="next" onclick="plusSlides(1)">&#10095;</a>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<div class="col-md-3 col-sm-12 w3_ms7">-->
+<!--<h4 class="mb-lg-4 mb-md-3 mb-sm-2 mb-2">What We Do</h4>-->
+<!--<p>We at My Homey provide you with the best services for almost all home and office cleaning. Whether you need an emergency cleaning service, appliance repair, or disinfection, electrical work, or plumbing, our goal is to reduce the time spent and ensure that you get the best service you deserve.</p>-->
+<!--</div>-->
+<!--<div class="col-md-3 col-sm-12 w3_ms">-->
+<!--	<div class="row inner_stat_wthree_agileits">-->
+
+<!--			<div class="col-md-6 stats_left counter_grid2">-->
+<!--				<i class="far fa-edit"></i>-->
+<!--				<p class="counter">563</p>-->
+<!--				<h4>Projects</h4>-->
+<!--			</div>-->
+<!--			<div class="col-md-6 stats_left counter_grid3">-->
+<!--				<i class="far fa-smile"></i>-->
+<!--				<p class="counter">1045</p>-->
+<!--				<h4>Happy Clients</h4>-->
+<!--			</div>-->
+
+<!--		</div>-->
+<!--		</div>-->
+
+
+<!--<div class="col-md-3 col-sm-12 w3_ms6">-->
+<!--</div>-->
+<!--<div class="col-md-3 col-sm-12 w3_ms4">-->
+<!--<h4 class="mb-lg-4 mb-md-3 mb-sm-2 mb-2">How We Do It</h4>-->
+<!--<p>We help you to get the best home service that you deserve in less than 60 seconds. Bookings can be made online. For bookings across Kerala, visit our official website, send an email, or call us – 09895040101. Our 24/7 customer support team will always be there to help you.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; Skills &ndash;&gt;-->
+<!--&lt;!&ndash;<section class="skills py-lg-5 py-md-4 py-md-3 py-2">&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="stats wthree-sub py-lg-5 py-md-4 py-md-3 py-2" id="skills">&ndash;&gt;-->
+<!--&lt;!&ndash;	<div class="container"> &ndash;&gt;-->
+<!--&lt;!&ndash;		<h3 class="w3l-title mb-lg-4 mb-md-3 mb-sm-2 mb-2">Our Skills</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;		<div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;		<div class="col-sm-6 stats_grid_right">&ndash;&gt;-->
+<!--&lt;!&ndash;			<div class="skillbar" data-percent="78">&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skillbar-title" style="background: #f1703a;">INTERIORS</span>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <p class="skillbar-bar" style="background: #f88c5e;"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skill-bar-percent"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--&lt;!&ndash;			&lt;!&ndash; End Skill Bar &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;			&ndash;&gt;-->
+<!--&lt;!&ndash;			<div class="skillbar" data-percent="94">&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skillbar-title" style="background: #2980b9;">EXTRIORS</span>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <p class="skillbar-bar" style="background: #3498db;"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skill-bar-percent"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--&lt;!&ndash;			&lt;!&ndash; End Skill Bar &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;			&ndash;&gt;-->
+<!--&lt;!&ndash;			<div class="skillbar" data-percent="76">&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skillbar-title" style="background: #a0d034;">GARDENING</span>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <p class="skillbar-bar" style="background: #b2ec2f;"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skill-bar-percent"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--&lt;!&ndash;			&lt;!&ndash; End Skill Bar &ndash;&gt; &ndash;&gt;-->
+<!--&lt;!&ndash;		</div>&ndash;&gt;-->
+<!--&lt;!&ndash;		<div class="col-sm-6 stats_grid_right"> &ndash;&gt;-->
+<!--&lt;!&ndash;			<div class="skillbar" data-percent="54">&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skillbar-title" style="background: #f1703a;">ROOFING</span>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <p class="skillbar-bar" style="background: #f88c5e;"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skill-bar-percent"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--&lt;!&ndash;			&lt;!&ndash; End Skill Bar &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;			&ndash;&gt;-->
+<!--&lt;!&ndash;			<div class="skillbar" data-percent="64">&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skillbar-title" style="background: #2980b9;">PARTIES</span>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <p class="skillbar-bar" style="background: #3498db;"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skill-bar-percent"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--&lt;!&ndash;			&lt;!&ndash; End Skill Bar &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;			&ndash;&gt;-->
+<!--&lt;!&ndash;			<div class="skillbar" data-percent="84">&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skillbar-title" style="background: #a0d034;">DECORATION</span>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <p class="skillbar-bar" style="background: #b2ec2f;"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;			  <span class="skill-bar-percent"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;			</div>&ndash;&gt;-->
+<!--&lt;!&ndash;		</div>&ndash;&gt;-->
+<!--&lt;!&ndash;		</div>&ndash;&gt;-->
+<!--&lt;!&ndash;	</div> &ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</section>&ndash;&gt;-->
+<!--&lt;!&ndash; /Skills &ndash;&gt;-->
+
+<!--&lt;!&ndash; Contact &ndash;&gt;-->
+<!--<section class="contact py-lg-5 py-md-4 py-md-3 py-2">-->
+<!--<div class="container py-lg-5 py-md-4 py-md-3 py-2">-->
+<!--<div class="w3_mg">-->
+<!--<h3>Your Homey</h3>-->
+<!--<p class=" my-lg-4 my-md-3 my-sm-2 my-2">We help you to get the best home service that you deserve in less than 60 seconds.</p>-->
+<!--&lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+<!--  Conatct Page-->
+<!--</button>-->
+
+<!--&lt;!&ndash; Modal &ndash;&gt;-->
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">Your Homey</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--      <div class="contact" id="contact">-->
+<!--         <div class="container">-->
+<!--            <h3 class="title clr">CONTACT FORM</h3>-->
+<!--            <div class=" contact-form">-->
+<!--               <form action="#" method="post">-->
+<!--                  <div class="row contact-bothside-agileinfo">-->
+<!--                     <div class="col-md-6 col-sm-6 col-xs-6 form-right form-left">-->
+<!--                        <input type="text" name="Name" placeholder="Name" required="">-->
+<!--                     </div>-->
+<!--                     <div class="col-md-6 col-sm-6 col-xs-6 form-right ">-->
+<!--                        <input type="text" name="Last name" placeholder="Last name" required="">-->
+<!--                     </div>-->
+<!--                     <div class="col-md-6 col-sm-6 col-xs-6 form-right form-left">-->
+<!--                        <input type="email" name="Email" placeholder="Email" required="">-->
+<!--                     </div>-->
+<!--                     <div class="col-md-6 col-sm-6 col-xs-6 form-right ">-->
+<!--                        <input type="text" name="phone" placeholder="Phone" required="">-->
+<!--                     </div>-->
+<!--                     <textarea name="Message" placeholder="Message" required=""></textarea>-->
+<!--                     <input type="submit" value="SUBMIT">-->
+<!--                  </div>-->
+<!--               </form>-->
+<!--            </div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /Conatct -->
+<!-- Footer-->
+<section class="footer">
+<div class="container">
+<h3>Your Homey</h3>
+     <div class="wrapper">
+<ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+<li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li> <a href="#"><i class="fab fa-twitter"></i></a></li>
+<li> <a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+</ul>
+</div>
+<!--<div class="copyright">-->
+<!--			<p>© 2024 Your Homey. All Rights Reserved | Design by Jewel</p>-->
+
+<!--		</div>-->
+<!--	</div>-->
+<!--</section>-->
+<!-- /Footer-->
+<!--  </div>-->
+
+<!--    &lt;!&ndash; bootstrap-pop-up for login and register &ndash;&gt;-->
+<!--    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    Your Homey-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <section>-->
+<!--                    <div class="modal-body">-->
+<!--                        <div class="loginf_module">-->
+<!--                            <div class="module form-module">-->
+<!--                                <div class="toggle">-->
+<!--                                    <i class="fa fa-times fa-pencil"></i>-->
+<!--                                    <div class="tooltip">Register</div>-->
+
+<!--                                </div>-->
+
+
+<!--                                <div class="form">-->
+<!--                                    <h3>Login to your account</h3>-->
+<!--                                    <form action="log" method="post">-->
+<!--                                        <input type="text" name="Username" placeholder="Username" required="">-->
+<!--                                        <input type="password" name="Password" placeholder="Password" required="">-->
+<!--                                        <input type="submit" value="Login">-->
+<!--                                    </form>-->
+<!--                                    <div class="cta">-->
+<!--                                        <a href="#">Forgot password?</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+
+
+<!--                                <div class="form">-->
+<!--                                    <h3>Create a new account</h3>-->
+<!--                                      &lt;!&ndash; message &ndash;&gt;-->
+<!--                                        {% if messages %}-->
+<!--                                        <div class="container">-->
+<!--                                            <div class="alert alert-success alert-dismissible messages">-->
+<!--                                                {% for message in messages %}-->
+<!--                                                    <button type="button" class="close" data-dismiss="alert" >*</button>-->
+<!--                                                 {{message}}-->
+<!--                                            </div>-->
+<!--                                             {% endfor %}-->
+<!--                                        </div>-->
+<!--                                        {% endif %}-->
+<!--                                    &lt;!&ndash; //message &ndash;&gt;-->
+<!--                                    <form action="reg" method="post">-->
+<!--                                        {% csrf_token %}-->
+<!--                                        <input type="text" name="name" placeholder="name" required="">-->
+<!--                                        <input type="text" name="username" placeholder="Username" required="">-->
+<!--                                        <input type="password" name="password" placeholder="Password" required="">-->
+<!--                                        <input type="email" name="email" placeholder="Email address" required="">-->
+<!--                                        <input type="text" name="phone" placeholder="Phone Number" required="">-->
+<!--                                        <textarea name="address" placeholder="Address" required=""></textarea>-->
+<!--                                        <input type="text" name="pin" placeholder="Pin Code" required="">-->
+<!--                                        <input type="submit" value="Register">-->
+<!--                                    </form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </section>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+
+<!--<div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    Your Homey-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                        <span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <section>-->
+<!--                    <div class="modal-body">-->
+<!--                        <div class="loginf_module">-->
+<!--                            <div class="module form-module">-->
+<!--                                <div class="toggle">-->
+<!--                                    <i class="fa fa-times fa-pencil"></i>-->
+<!--                                    <div class="tooltip">Register</div>-->
+
+<!--                                </div>-->
+
+<!--                                <div class="form">-->
+<!--                                    <h3>Employee Login</h3>-->
+<!--                                    <form action="#" method="post">-->
+<!--                                        <input type="text" name="Username" placeholder="Username" required="">-->
+<!--                                        <input type="password" name="Password" placeholder="Password" required="">-->
+<!--                                        <input type="submit" value="Login">-->
+<!--                                    </form>-->
+<!--                                    <div class="cta">-->
+<!--                                        <a href="#">Forgot password?</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="form">-->
+<!--                                    <h3>Create an employee account</h3>-->
+<!--                                    <form action="#" method="post">-->
+<!--                                        <input type="text" name="Username" placeholder="Username" required="">-->
+<!--                                        <input type="password" name="Password" placeholder="Password" required="">-->
+<!--                                        <input type="email" name="Email" placeholder="Email address" required="">-->
+<!--                                        <select style="width:340px;height:40px;border-style:inset;">-->
+<!--                                            <option>select work category</option>-->
+<!--                                            <option>Home Cleaning</option>-->
+<!--                                            <option>Maid Services</option>-->
+<!--                                            <option>Window Washing</option>-->
+<!--                                            <option>Commercial Cleaning</option>-->
+<!--                                            <option>Move-In/Move-Out Cleaning</option>-->
+<!--                                            <option>Carpet Cleaning</option>-->
+<!--							            </select>-->
+<!--                                        <input type="text" name="Phone" placeholder="Phone Number" required="" style="margin-top:15px;">-->
+<!--                                        <input type="submit" value="Register">-->
+<!--                                    </form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </section>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!-- //bootstrap-pop-up for login and register-->
+
+<script  src="{% static 'js/jquery.min.v3.js' %}"></script>
+<script  src="{% static 'js/bootstrap.min.js' %}"></script>
+<script  src="{% static 'js/move-top.js' %}"></script>
+<script  src="{% static 'js/easing.js' %}"></script>
+<script  src="{% static 'js/SmoothScroll.min.js' %}"></script>
+
+	<!-- banner Slider -->
+	<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider3").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- //banner Slider -->
+
+
+	<script src="{% static 'js/easy-responsive-tabs.js' %}"></script>
+<script>
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+</script>
+<!--//tabs-->
+	<!--team-->
+<script type="text/javascript">
+							$(window).load(function() {
+								$("#flexiselDemo1").flexisel({
+									visibleItems:4,
+									animationSpeed: 1000,
+									autoPlay: true,
+									autoPlaySpeed: 3000,
+									pauseOnHover: true,
+									enableResponsiveBreakpoints: true,
+									responsiveBreakpoints: {
+										portrait: {
+											changePoint:480,
+											visibleItems: 1
+										},
+										landscape: {
+											changePoint:640,
+											visibleItems:2
+										},
+										tablet: {
+											changePoint:768,
+											visibleItems: 3
+										}
+									}
+								});
+
+							});
+					</script>
+				<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+
+<!--team-->
+<script src="{% static 'js/jquery.magnific-popup.js' %}" type="text/javascript"></script>
+ <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+
+						});
+				</script>
+<script type="text/javascript">
+var words = document.getElementsByClassName('word');
+var wordArray = [];
+var currentWord = 0;
+
+words[currentWord].style.opacity = 1;
+for (var i = 0; i < words.length; i++) {
+  splitLetters(words[i]);
+}
+
+function changeWord() {
+  var cw = wordArray[currentWord];
+  var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+  for (var i = 0; i < cw.length; i++) {
+    animateLetterOut(cw, i);
+  }
+
+  for (var i = 0; i < nw.length; i++) {
+    nw[i].className = 'letter behind';
+    nw[0].parentElement.style.opacity = 1;
+    animateLetterIn(nw, i);
+  }
+
+  currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+}
+
+function animateLetterOut(cw, i) {
+  setTimeout(function() {
+        cw[i].className = 'letter out';
+  }, i*80);
+}
+
+function animateLetterIn(nw, i) {
+  setTimeout(function() {
+        nw[i].className = 'letter in';
+  }, 340+(i*80));
+}
+
+function splitLetters(word) {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+
+  wordArray.push(letters);
+}
+
+changeWord();
+setInterval(changeWord, 4000);
+
+</script>
+
+	<!-- stats -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'js/jquery.countup.js' %}"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //stats -->
+<!-- skills -->
+<script src="{% static 'js/skill.bars.jquery.js' %}"></script>
+<script>
+	$(document).ready(function(){
+
+		$('.skillbar').skillBars({
+			from: 0,
+			speed: 4000,
+			interval: 100,
+			decimals: 0,
+		});
+
+	});
+</script>
+<!-- //skills -->
+   <!-- sign in and signup pop up toggle script -->
+    <script>
+        $('.toggle').click(function () {
+            // Switches the Icon
+            $(this).children('i').toggleClass('fa-pencil');
+            // Switches the forms
+            $('.form').animate({
+                height: "toggle",
+                'padding-top': 'toggle',
+                'padding-bottom': 'toggle',
+                opacity: "toggle"
+            }, "slow");
+        });
+    </script>
+    <!-- sign in and signup pop up toggle script -->
+	<script type="text/javascript">
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+	</script>
+<!-- start-smoth-scrolling -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+<!-- scrolling script -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+<!-- //scrolling script -->
+<!--//start-smoth-scrolling -->
+
+</div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Home Service | Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Fast Service a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/easy-responsive-tabs.css '%}" rel='stylesheet' type='text/css'/>
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="all">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+</head>
+<body>
+<header>
+	<!-- header -->
+	<div class="header-w3l">
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="index.html">Your Homey</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="adminhom">Home </a>
+		<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Service
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="addservic">Add Service</a>
+          <a class="dropdown-item" href="viewservic">View Service</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Customer
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="viewuser">View Customer</a>
+          <a class="dropdown-item" href="adminorder">View Order</a>
+        </div>
+      </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Worker
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="empview">View Worker</a>
+        </div>
+        <li class="nav-item">
+            <a class="nav-link " href="ad_bookdt">Paid Order</a>
+        </li>
+</li>
+        <li class="nav-item">
+        <a class="nav-link " href="adminfeed">Feedback</a>
+      </li>
+
+<li class="w3">
+                            <a href="index" class="nav-link">Logout</a>
+                        </li>
+
+    </ul>
+  </div>
+</nav>
+
+	<!-- //header -->
+
+	<!-- banner -->
+	<!-- banner-slider -->
+	<div class="w3l_banner_info">
+		<div class="slider1">
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>
+						<div class="slider1-img">
+							<div class="slider_banner_info">
+
+
+							</div>
+						</div>
+					</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //banner-slider -->
+</div>
+</header>
+
+<section class="contact  py-lg-5 py-md-4 py-md-3 py-2" id="contact">
+	<section class="wthree-row py-5 w3-contact" id="contact1">
+		<div class="container py-md-5">
+			<div class="row contact-form ">
+				<div class="col-lg-6 wthree-form-left">
+					<!-- contact form grid -->
+					<div class="contact-top1">
+					<table border="1" style="margin-right: 20px; ">
+				<thead>
+				<tr>
+					<th>Work Category</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th>Image</th>
+					<th>Edit</th>
+					<th>Delete</th>
+		  		</tr>
+		  		</thead>
+				<tbody>
+				{% for i in d %}
+				<tr>
+					<td>{{i.servicename}}</td>
+					<td>{{i.description}}</td>
+        			<td>{{i.price}}</td>
+                    <td><img src="{{i.image.url}}" width="100" height="100"></td>
+					<td><button type="submit" ><a href="edit/{{i.id}}">Edit</a></button></td>
+					<td><button type="submit"><a href="../delete/{{i.id}}">Delete</a></button></td>
+				</tr>
+    			{% endfor %}
+    			</tbody>
+			</table>
+					</div>
+					<!--  //contact form grid ends here -->
+				</div>
+			</div>
+			<!-- //contact details container -->
+		</div>
+	</section>
+	</section>
+	<!-- //contact -->
+<!---->
+
+<!-- Footer-->
+<section class="footer">
+<div class="container">
+<h3>Your Homey</h3>
+     <div class="wrapper">
+<ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+<li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li> <a href="#"><i class="fab fa-twitter"></i></a></li>
+<li> <a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+</ul>
+</div>
+<div class="copyright">
+			<p>© 2024 Your Homey. All Rights Reserved | Design by Jewel</a></p>
+
+		</div>
+	</div>
+</section>
+<script  src="{% static 'js/jquery.min.v3.js' %}"></script>
+<script  src="{% static 'js/bootstrap.min.js' %}"></script>
+<script  src="{% static 'js/move-top.js' %}"></script>
+<script  src="{% static 'js/easing.js' %}"></script>
+<script  src="{% static 'js/SmoothScroll.min.js' %}"></script>
+
+
+   <!-- sign in and signup pop up toggle script -->
+    <script>
+        $('.toggle').click(function () {
+            // Switches the Icon
+            $(this).children('i').toggleClass('fa-pencil');
+            // Switches the forms
+            $('.form').animate({
+                height: "toggle",
+                'padding-top': 'toggle',
+                'padding-bottom': 'toggle',
+                opacity: "toggle"
+            }, "slow");
+        });
+    </script>
+    <!-- sign in and signup pop up toggle script -->
+
+<!-- start-smoth-scrolling -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+<!-- scrolling script -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+</body>
+</html>
+
+
+
+
+

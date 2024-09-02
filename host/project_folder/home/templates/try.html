@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Home Service | Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Fast Service a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+</head>
+<style>
+
+</style>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="index.html">Your Homey</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="adminhom">Home </a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Service
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="addservic">Add Service</a>
+          <a class="dropdown-item" href="viewservic">View Service</a>
+        </div>
+      </li>
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link" href="about">View Customer</a>-->
+<!--      </li>-->
+<!--	  <li class="nav-item">-->
+<!--        <a class="nav-link" href="services">View Workers</a>-->
+<!--      </li>-->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Customer
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="viewuser">View Customer</a>
+          <a class="dropdown-item" href="typography.html">Customer Review</a>
+
+          <a class="dropdown-item" href="error.html">View Order</a>
+        </div>
+      </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Worker
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="empview">View Worker</a>
+          <a class="dropdown-item" href="typography.html">View Work</a>
+        </div>
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link " href="con">Contact</a>-->
+<!--      </li>-->
+
+<li class="w3">
+                            <a href="index" class="nav-link">Logout</a>
+                        </li>
+
+    </ul>
+  </div>
+</nav>
+    <style>
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+thead {
+	th {
+		background-color: #55608f;
+	}
+}
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+}
+    </style>
+<body>
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th>Work Category</th>
+				<th>Description</th>
+				<th>Price</th>
+                <th>Image</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in d %}
+				<tr>
+					<td>{{i.category}}</td>
+					<td>{{i.description}}</td>
+        			<td>{{i.price}}</td>
+                    <td><img src="{{i.image.url}}" width="100" height="100"></td>
+				</tr>
+    			{% endfor %}
+		</tbody>
+	</table>
+</div>
+</header>
+<!--<script>-->
+
+<!--</script>-->
+</body>
+</html>

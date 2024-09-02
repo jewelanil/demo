@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Home Service | forgot password</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Fast Service a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/fontawesome-all.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/easy-responsive-tabs.css' %}" rel='stylesheet' type='text/css'/>
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="all">
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <style>
+        /* Custom styles for content section */
+        .profile-details {
+            text-align: center;
+        }
+
+        .profile-details img {
+            width: 150px; /* Adjust as needed */
+            height: 150px; /* Adjust as needed */
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .profile-form {
+            background-color: #f8f9fa; /* Adjust background color as needed */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .profile-form form {
+            margin-bottom: 0; /* Remove default margin */
+        }
+
+        .profile-form .form-group {
+            margin-bottom: 20px; /* Adjust spacing between form elements */
+        }
+
+        .profile-form .btn.profile-button {
+            width: 100%; /* Make button full width */
+        }
+    </style>
+</head>
+
+<body style="background-color:black;">
+    <!-- header -->
+    <header id="site-header" style="margin-left:-365px;">
+        <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index">Your Homey</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="../userhom">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../userabout">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../userservices">Services</a>
+             <li class="nav-item ">
+                <a class="nav-link" href="usrprof">profile </a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link " href="../feed">Feedback</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="../usercon">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        </div>
+	</header><br><br><br>
+<form action="" method="post" align="center" style="position:relative;top:150px;">
+    {% csrf_token %}
+<h1 style="color:white;">Reset password</h1><br>
+New password:
+<input type="text" name="newpassword"><br><br>
+confirm password:
+<input type="text" name="cpassword"><br><br>
+<button type="submit">set new password</button>
+</form>
+</body>
+</html>
